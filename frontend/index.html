@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase - College Parking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>PARKEASE</h1>
+            <p>College Parking Management System</p>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Currently Parked</h2>
+            <p class="section-note">Vehicles currently parked inside the campus.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Slot</th>
+                        <th>Vehicle Number</th>
+                        <th>Type</th>
+                        <th>Student ID</th>
+                    </tr>
+                </thead>
+                <tbody id="vehicleList"></tbody>
+            </table>
+        </section>
+        <section class="card">
+            <h2>Parking Slots</h2>
+            <h3>Bike Slots</h3>
+            <div class="slot-grid" id="bikeSlots"></div>
+            <h3>Car Slots</h3>
+            <div class="slot-grid car-grid" id="carSlots"></div>
+            <p class="legend"><span class="legend-box available"></span> Available <span
+                    class="legend-box occupied"></span> Occupied</p>
+        </section>
+        <section class="two-column">
+            <div class="card">
+                <h2>Park Vehicle</h2>
+                <div class="form-row">
+                    <div><label>Student ID</label><input id="studentId" type="number" placeholder="e.g. 101"></div>
+                    <div><label>Vehicle Number</label><input id="vehicleNumber" type="text"
+                            placeholder="e.g. UP32AB1234"></div>
+                </div><label>Vehicle Type</label><select id="vehicleType">
+                    <option value="Bike">Bike</option>
+                    <option value="Car">Car</option>
+                </select><button onclick="parkVehicle()">Park Vehicle</button>
+                <p id="parkMessage" class="message"></p>
+            </div>
+            <div class="card">
+                <h2>Remove Vehicle</h2><label>Vehicle Number</label><input id="removeNumber" type="text"
+                    placeholder="Enter vehicle number"><button onclick="removeVehicle()">Remove Vehicle</button>
+                <p id="removeMessage" class="message"></p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Search Vehicle</h2>
+            <div class="search-row"><input id="searchNumber" type="text" placeholder="Enter vehicle number"><button
+                    onclick="searchVehicle()">Search</button></div>
+            <div id="searchResult"></div>
+        </section>
+        <section class="card information">
+            <h2>Parking Information</h2>
+            <ul>
+                <li>A01–A20 are for bikes.</li>
+                <li>B01–B10 are for cars.</li>
+                <li>Enter the correct vehicle number while parking.</li>
+                <li>Remove the vehicle after leaving the campus.</li>
+            </ul>
+        </section>
+    </main>
+    <footer><strong>ParkEase</strong>
+        <p>College Parking Management System</p><small>C Programming Project • 2026</small>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

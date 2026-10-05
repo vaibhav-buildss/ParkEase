@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f4ef;
+    color: #292724;
+}
+
+header {
+    background: #292724;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    border-bottom: 3px solid #d9822b;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 7px 0 0;
+    color: #d8d2ca;
+    font-size: 14px;
+}
+
+main {
+    width: 90%;
+    max-width: 950px;
+    margin: 28px auto;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2ddd5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    font-size: 19px;
+}
+
+.section-note {
+    margin: 0 0 15px;
+    color: #81796f;
+    font-size: 13px;
+}
+
+.card h3 {
+    margin: 18px 0 9px;
+    font-size: 14px;
+    color: #625b53;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #e4dfd7;
+    padding: 9px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #292724;
+    color: white;
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background: #faf9f6;
+}
+
+.empty {
+    text-align: center;
+    padding: 20px;
+    color: #81796f;
+}
+
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 7px;
+}
+
+.slot {
+    border: 1px solid #ddd7ce;
+    border-radius: 5px;
+    padding: 8px 4px;
+    text-align: center;
+    min-height: 48px;
+}
+
+.slot strong {
+    display: block;
+    font-size: 12px;
+}
+
+.slot small {
+    display: block;
+    margin-top: 4px;
+    font-size: 9px;
+    color: #827a70;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.available-slot {
+    background: #faf9f6;
+}
+
+.occupied-slot {
+    background: #f0dfca;
+    border-color: #d9822b;
+}
+
+.occupied-slot small {
+    color: #765126;
+}
+
+.legend {
+    margin: 13px 0 0;
+    color: #71695f;
+    font-size: 12px;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px 0 10px;
+    border: 1px solid #d6d0c7;
+    vertical-align: middle;
+}
+
+.legend-box:first-child {
+    margin-left: 0;
+}
+
+.legend-box.available {
+    background: #faf9f6;
+}
+
+.legend-box.occupied {
+    background: #f0dfca;
+    border-color: #d9822b;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 12px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #514d47;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #d5d0c8;
+    border-radius: 5px;
+    background: #faf9f6;
+    color: #292724;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #d9822b;
+}
+
+button {
+    margin-top: 15px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #d9822b;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    background: #b96d20;
+}
+
+.message {
+    min-height: 18px;
+    color: #6b6258;
+    font-size: 13px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.search-row input {
+    flex: 1;
+}
+
+.search-row button {
+    margin-top: 0;
+}
+
+#searchResult {
+    margin-top: 13px;
+    padding: 11px;
+    background: #f6f2ec;
+    border: 1px solid #e5ded4;
+    border-radius: 5px;
+    line-height: 1.7;
+    color: #514d47;
+}
+
+.information ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    color: #655e56;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #827b72;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width:700px) {
+    main {
+        width: 92%;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .slot-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row button {
+        width: fit-content;
+    }
+}
